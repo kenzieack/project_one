@@ -1,169 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-     <!-- Fonts Awesome -->
- <script src="https://kit.fontawesome.com/55233fae23.js" crossorigin="anonymous"></script>
- <!-- Materialize CDN -->
- <script
-  src="https://code.jquery.com/jquery-3.4.1.js"
-  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-  crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+  <!-- Materialize CDN -->
+  <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
   <!-- Compiled and minified CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+  <!-- Fonts Awesome -->
+  <script src="https://kit.fontawesome.com/55233fae23.js" crossorigin="anonymous"></script>
   <!-- CSS -->
   <link rel="stylesheet" type="text/css" href="style.css">
 
 </head>
+
 <body>
   <!-- navbar -->
   <nav>
-        <div class="nav-wrapper">
-          <a href="#" class="brand-logo center"><i class="fab fa-soundcloud"></i></a>
-        </div>
-      </nav>
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo center"><i class="fab fa-soundcloud"></i></a>
+    </div>
+  </nav>
 
-      <div class="container">
-      <!-- header -->
-<h2>Artist List</h2>
-<small>1234 Results</small>
-<hr>
-<!-- result card one -->
-      
-        <div class="col s12 m7">
-          <div class="card medium">
-            <div class="card-image">
-              <img src="./Assets/mac.jpeg">
-              <span class="card-title">Card Title</span>
-            </div>
-            <div class=" info">
-                <b>Bio</b>
-                <hr>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut, eum officiis animi ullam illo necessitatibus esse facilis nostrum laudantium temporibus.</p>
-                <br>
-                <b>Popular Tweets</b>
-                <hr>
-                <ul>
-                    <li class="popular-tweets">Always remember... Picking the correct shirt can do unbelievable things for your day – Mac Miller</li>
-                    <br>
-                    <li class="popular-tweets">two</li>
-                    <br>
-                    <li class="popular-tweets">three</li>
-                    <br>
-                    <li class="popular-tweets">four</li>   
-                </ul>
-              </div>
-            <div class="card-action">
-              <a href="#" class="share">SHARE</a>
-            </div>
-          </div>
-        </div>
-        
-      
+  <div class="container">
 
-      <!-- result card two -->
-      
-        <div class="col s12 m7">
-          <div class="card medium">
-            <div class="card-image">
-              <img src="./Assets/cardi.jpg">
-              <span class="card-title">Card Title</span>
-            </div>
-            <div class="info">
-              <b>Bio</b>
-              <hr>
-              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut, eum officiis animi ullam illo necessitatibus esse facilis nostrum laudantium temporibus.</p>
-              <br>
-              <b>Popular Tweets</b>
-              <hr>
-              <ul>
-                  <li class="popular-tweets">one</li>
-                  <br>
-                  <li class="popular-tweets">two</li>
-                  <br>
-                  <li class="popular-tweets">three</li>
-                  <br>
-                  <li class="popular-tweets">four</li>   
-              </ul>
-            </div>
-            <div class="card-action">
-              <a href="#" class="share">SHARE</a>
-            </div>
-          </div>
-        </div>
-      
 
-      <!-- result card three -->
-      
-        <div class="col s12 m7">
-          <div class="card medium">
-            <div class="card-image">
-              <img src="./Assets/kendrick-lamar.jpg">
-              <span class="card-title">Card Title</span>
-            </div>
-            <div class="info">
-                <b>Bio</b>
-                <hr>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut, eum officiis animi ullam illo necessitatibus esse facilis nostrum laudantium temporibus.</p>
-                <br>
-                <b>Popular Tweets</b>
-                <hr>
-                <ul>
-                  <li class="popular-tweets">one</li>
-                  <br>
-                  <li class="popular-tweets">two</li>
-                  <br>
-                  <li class="popular-tweets">three</li>
-                  <br>
-                  <li class="popular-tweets">four</li>                  
-                </ul>
-              </div>
-            <div class="card-action">
-              <a href="#" class="share">SHARE</a>
-            </div>
-          
+    <!-- *** WE NEED TO INSERT THE LANDING PAGE HERE *** -->
+
+    <!-- header -->
+    <h2>Results</h2>
+    <hr>
+
+    <!-- result card one -->
+    <div class="col s12 m7">
+      <div class="card medium">
+        <div class="card-image">
+          <img src="./Assets/mac.jpeg">
+          <span class="card-title">Result from Search By goes here</span>
         </div>
+        <div class=" info">
+          <b>Top News</b>
+          <hr>
+          <!-- *** UL NEEDS TO BE SET-UP SO THAT WE CAN DYNAMICALLY POPULATE IT WITH THE RESULTS FROM THE NYT *** -->
+          <ul>
+            <li class="popular-tweets">Always remember... Picking the correct shirt can do unbelievable things for your
+              day – Mac Miller</li>
+            <br>
+            <li class="popular-tweets">two</li>
+            <br>
+            <li class="popular-tweets">three</li>
+            <br>
+            <li class="popular-tweets">four</li>
+          </ul>
         </div>
-<!-- result card four -->
-      
-<div class="col s12 m7">
-    <div class="card medium">
-      <div class="card-image">
-        <img src="./Assets/bruno_mars.jpg">
-        <span class="card-title">Card Title</span>
       </div>
-      <div class="info">
-        <b>Bio</b>
-        <hr>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut, eum officiis animi ullam illo necessitatibus esse facilis nostrum laudantium temporibus.</p>
-        <br>
-        <b>Popular Tweets</b>
-        <hr>
-        <ul>
+    </div>
+
+
+    <!-- result card two -->
+    <div class="col s12 m7">
+      <div class="card medium">
+        <div class="card-image">
+          <img src="./Assets/cardi.jpg">
+          <span class="card-title">Card Title</span>
+        </div>
+        <div class="info">
+          <b>Top News</b>
+          <hr>
+          <ul>
             <li class="popular-tweets">one</li>
             <br>
             <li class="popular-tweets">two</li>
             <br>
             <li class="popular-tweets">three</li>
             <br>
-            <li class="popular-tweets">four</li>   
-        </ul>
+            <li class="popular-tweets">four</li>
+          </ul>
+        </div>
       </div>
-      <div class="card-action">
-        <a href="#" class="share">SHARE</a>
+    </div>
+
+
+    <!-- result card three -->
+    <div class="col s12 m7">
+      <div class="card medium">
+        <div class="card-image">
+          <img src="./Assets/kendrick-lamar.jpg">
+          <span class="card-title">Card Title</span>
+        </div>
+        <div class="info">
+          <b>Top News</b>
+          <hr>
+          <ul>
+            <li class="popular-tweets">one</li>
+            <br>
+            <li class="popular-tweets">two</li>
+            <br>
+            <li class="popular-tweets">three</li>
+            <br>
+            <li class="popular-tweets">four</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- result card four -->
+    <div class="col s12 m7">
+      <div class="card medium">
+        <div class="card-image">
+          <img src="./Assets/bruno_mars.jpg">
+          <span class="card-title">Card Title</span>
+        </div>
+        <div class="info">
+          <b>Top News</b>
+          <hr>
+          <ul>
+            <li class="popular-tweets">one</li>
+            <br>
+            <li class="popular-tweets">two</li>
+            <br>
+            <li class="popular-tweets">three</li>
+            <br>
+            <li class="popular-tweets">four</li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
-      <!-- end of container div -->
-    </div>
+  <!-- end of container div -->
 
+  <script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="script.js"></script>
 </body>
-<script type ="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-<!-- <script src="script.js"></script> -->
+
 </html>
