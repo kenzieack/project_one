@@ -1,2 +1,2 @@
-# project_one
-Generate playlist from trending artists
+# project1
+first group project for UCLA coding bootcamp

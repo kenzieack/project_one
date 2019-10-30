@@ -1,0 +1,59 @@
+body {
+    font-family: "gotham";
+    background-color: rgb(231, 231, 231);
+}
+
+.container {
+    margin: 0 auto;
+    width: 70%;
+    
+}
+
+.nav-wrapper {
+    background-color: dodgerblue;
+}
+
+.card-title {
+    background-color: dodgerblue;
+    padding: 5px !important;
+    border-radius: 50px;
+    margin: 8px;
+    font-size: 16px !important;
+}
+
+.card {
+    width: 45%;
+    margin: 2%;
+    display: block;
+    float: left;
+    height: 100vh !important;
+}
+
+.info {
+    width: 90%;
+    margin: 10px auto;
+}
+
+.card-action {
+    text-align: center;
+}
+
+.share {
+    color: dodgerblue !important;
+}
+
+.share:hover {
+    color: white !important;
+    background-color: dodgerblue;
+    padding: 10px;
+    border-radius: 30px;
+}
+h2 {
+    font-weight: 700;
+    margin-bottom: 5px;
+    margin-top: 15px;
+}
+
+.popular-tweets:hover {
+    color: dodgerblue;
+}
