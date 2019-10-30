@@ -5,18 +5,24 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title>Enterntainment News</title>
 
   <!-- Materialize CDN -->
   <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
     crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
+  <!-- Materialize CDN -->
   <!-- Compiled and minified CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+  <!-- Fonts Awesome -->
+  <script src="https://kit.fontawesome.com/55233fae23.js" crossorigin="anonymous"></script>
+
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
-  <!-- Fonts Awesome -->
-  <script src="https://kit.fontawesome.com/55233fae23.js" crossorigin="anonymous"></script>
+
   <!-- CSS -->
   <link rel="stylesheet" type="text/css" href="style.css">
 
@@ -30,26 +36,98 @@
     </div>
   </nav>
 
+  <div class="container box">
+
+    <section>
+      <h3>This is where the header goes</h3>
+      <p>Select your media to get started!</p>
+      <hr>
+    </section>
+
+    <!-- Media Dropdown -->
+    <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Media</a>
+
+    <!-- *** THIS ONE SHOULD HAVE ONLY THREE: AUDIOBOOKS, MUSIC, AND MOVIES *** -->
+    <!-- Dropdown Structure 1 -->
+    <ul id='dropdown1' class='dropdown-content'>
+      <li><a href="#!">one</a></li>
+      <li><a href="#!">two</a></li>
+      <li class="divider" tabindex="-1"></li>
+      <li><a href="#!">three</a></li>
+      <li><a href="#!"><i class="material-icons">view_module</i>four</a></li>
+      <li><a href="#!"><i class="material-icons">cloud</i>five</a></li>
+    </ul>
+
+    <!-- *** FOR GENRE WE WILL NEED TO CREATE ONE DROPDOWN MENU PER MEDIA TYPE AND USE A FUNCTION TO DETERMINE WHICH ONE WILL BE DISPLAYED *** -->
+    <!-- Genre Dropdown -->
+    <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Genre</a>
+
+    <!-- Dropdown Structure 1 -->
+    <ul id='dropdown1' class='dropdown-content'>
+      <li><a href="#!">one</a></li>
+      <li><a href="#!">two</a></li>
+      <li class="divider" tabindex="-1"></li>
+      <li><a href="#!">three</a></li>
+      <li><a href="#!"><i class="material-icons">view_module</i>four</a></li>
+      <li><a href="#!"><i class="material-icons">cloud</i>five</a></li>
+    </ul>
+
+    <!-- *** FOR 'SEARCH BY' WE WILL NEED TO CREATE ONE DROPDOWN MENU PER MEDIA TYPE AND USE A FUNCTION TO DETERMINE WHICH ONE WILL BE DISPLAYED *** -->
+    <!-- Search by Dropdown -->
+    <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Seach By</a>
+
+    <!-- Dropdown Structure 1 -->
+    <ul id='dropdown1' class='dropdown-content'>
+      <li><a href="#!">one</a></li>
+      <li><a href="#!">two</a></li>
+      <li class="divider" tabindex="-1"></li>
+      <li><a href="#!">three</a></li>
+      <li><a href="#!"><i class="material-icons">view_module</i>four</a></li>
+      <li><a href="#!"><i class="material-icons">cloud</i>five</a></li>
+    </ul>
+  </div>
+  <!-- end of landing page search section -->
+
+  <!-- THE SEARCH RESULTS SECTION -->
   <div class="container">
-
-
-    <!-- *** WE NEED TO INSERT THE LANDING PAGE HERE *** -->
-
     <!-- header -->
     <h2>Results</h2>
-    <hr>
 
+    <!-- *** REMOVE THE 1234 RESULTS SINCE WE'LL ONLY PROVIDE THE TOP X NUMBER *** -->
+
+    <small>1234 Results</small>
+    <hr>
     <!-- result card one -->
+
     <div class="col s12 m7">
       <div class="card medium">
         <div class="card-image">
-          <img src="./Assets/mac.jpeg">
-          <span class="card-title">Result from Search By goes here</span>
+
+
+          <!-- *** WE MIGHT NOT BE ABLE TO PUT A PICTURE OF THE ARTIST/ALBUM/ETC. SINCE I DON'T KNOW IF IT'S 
+          POSSIBLE TO EXTRACT THAT FROM ITUNES *** -->
+          <img src="./Assets/cardi.jpg">
+
+          <span class="card-title">Card Title</span>
         </div>
-        <div class=" info">
+        <!-- this is the latest news section  -->
+        <div class="latest-news">
+          <b>Latest News</b>
+          <hr>
+          <h6 class="article-title">Article Title</h6>
+          <p class="article">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut, eum officiis animi ullam
+            illo necessitatibus esse facilis nostrum laudantium temporibus.</p>
+          <label for="text">Read More</label>
+
+
+        </div>
+
+        <!-- *** WE USED TO HAVE A LIST FOR DYNAMICALLY GENERATING THEM WITH THE NEWS, WE MIGHT WANT TO BRING THAT BACK
+        FOR A NEATER LOOK?? -->
+        <!-- *** OLDER SECTION FOR NEWS WITHIN A LIST -->
+        <!-- <div class=" info">
           <b>Top News</b>
           <hr>
-          <!-- *** UL NEEDS TO BE SET-UP SO THAT WE CAN DYNAMICALLY POPULATE IT WITH THE RESULTS FROM THE NYT *** -->
           <ul>
             <li class="popular-tweets">Always remember... Picking the correct shirt can do unbelievable things for your
               day – Mac Miller</li>
@@ -60,87 +138,44 @@
             <br>
             <li class="popular-tweets">four</li>
           </ul>
-        </div>
-      </div>
-    </div>
+        </div> -->
 
 
-    <!-- result card two -->
-    <div class="col s12 m7">
-      <div class="card medium">
-        <div class="card-image">
-          <img src="./Assets/cardi.jpg">
-          <span class="card-title">Card Title</span>
-        </div>
-        <div class="info">
-          <b>Top News</b>
-          <hr>
-          <ul>
-            <li class="popular-tweets">one</li>
-            <br>
-            <li class="popular-tweets">two</li>
-            <br>
-            <li class="popular-tweets">three</li>
-            <br>
-            <li class="popular-tweets">four</li>
-          </ul>
-        </div>
+        <!-- <div class="card-action">
+              <a href="#" class="share">SHARE</a>
+            </div> -->
       </div>
     </div>
 
 
     <!-- result card three -->
+
     <div class="col s12 m7">
       <div class="card medium">
         <div class="card-image">
           <img src="./Assets/kendrick-lamar.jpg">
           <span class="card-title">Card Title</span>
         </div>
-        <div class="info">
-          <b>Top News</b>
+        <!-- this is the latest news section  -->
+        <div class="latest-news">
+          <b>Latest News</b>
           <hr>
-          <ul>
-            <li class="popular-tweets">one</li>
-            <br>
-            <li class="popular-tweets">two</li>
-            <br>
-            <li class="popular-tweets">three</li>
-            <br>
-            <li class="popular-tweets">four</li>
-          </ul>
+          <h6>Article Title</h6>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut, eum officiis animi ullam illo necessitatibus
+            esse facilis nostrum laudantium temporibus.</p>
+          <label for="text">Read More</label>
+
         </div>
+
       </div>
     </div>
 
-
-    <!-- result card four -->
-    <div class="col s12 m7">
-      <div class="card medium">
-        <div class="card-image">
-          <img src="./Assets/bruno_mars.jpg">
-          <span class="card-title">Card Title</span>
-        </div>
-        <div class="info">
-          <b>Top News</b>
-          <hr>
-          <ul>
-            <li class="popular-tweets">one</li>
-            <br>
-            <li class="popular-tweets">two</li>
-            <br>
-            <li class="popular-tweets">three</li>
-            <br>
-            <li class="popular-tweets">four</li>
-          </ul>
-        </div>
-      </div>
-    </div>
   </div>
-  <!-- end of container div -->
-
+  <!-- end of CONTAINER div -->
   <script type="text/javascript"
     src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <script src="script.js"></script>
 </body>
+
 
 </html>
