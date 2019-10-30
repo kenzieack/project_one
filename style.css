@@ -26,10 +26,10 @@ body {
     margin: 2%;
     display: block;
     float: left;
-    height: 100vh !important;
+    height: 2% !important;
 }
 
-.info {
+.latest-news {
     width: 90%;
     margin: 10px auto;
 }
@@ -48,12 +48,30 @@ body {
     padding: 10px;
     border-radius: 30px;
 }
-h2 {
+h3 {
     font-weight: 700;
     margin-bottom: 5px;
     margin-top: 15px;
 }
 
+h2 {
+    font-weight: 500;
+
+}
 .popular-tweets:hover {
     color: dodgerblue;
+}
+
+.box {
+    background-color: white;
+    box-shadow: 2px 2px 8px black;
+    padding: 20px;
+    margin: 25px auto;
+}
+
+.dropdown-trigger {
+    background-color: dodgerblue;
+    margin: 15px 40px;
+    width: 20%;
+    
 }
