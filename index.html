@@ -45,46 +45,111 @@
     </section>
 
     <!-- Media Dropdown -->
-    <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Media</a>
-
-    <!-- *** THIS ONE SHOULD HAVE ONLY THREE: AUDIOBOOKS, MUSIC, AND MOVIES *** -->
+    <a class='dropdown-trigger btn' href='#' data-target='dropdown-media'>Media</a>
     <!-- Dropdown Structure 1 -->
-    <ul id='dropdown1' class='dropdown-content'>
-      <li><a href="#!">one</a></li>
-      <li><a href="#!">two</a></li>
+    <ul id='dropdown-media' class='dropdown-content'>
+      <li><a href="#!">audiobooks</a></li>
       <li class="divider" tabindex="-1"></li>
-      <li><a href="#!">three</a></li>
-      <li><a href="#!"><i class="material-icons">view_module</i>four</a></li>
-      <li><a href="#!"><i class="material-icons">cloud</i>five</a></li>
+      <li><a href="#!">music</a></li>
+      <li class="divider" tabindex="-1"></li>
+      <li><a href="#!">movies</a></li>
     </ul>
 
-    <!-- *** FOR GENRE WE WILL NEED TO CREATE ONE DROPDOWN MENU PER MEDIA TYPE AND USE A FUNCTION TO DETERMINE WHICH ONE WILL BE DISPLAYED *** -->
     <!-- Genre Dropdown -->
-    <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Genre</a>
+    <a class='dropdown-trigger btn' href='#' data-target='dropdown-genre-music'>Genre</a>
 
-    <!-- Dropdown Structure 1 -->
-    <ul id='dropdown1' class='dropdown-content'>
-      <li><a href="#!">one</a></li>
-      <li><a href="#!">two</a></li>
+    <!-- Dropdown Structure Genre - Music -->
+    <ul id='dropdown-genre-music' class='dropdown-content'>
+      <li id="alternative"><a href="#!" id="music-20">Alternative</a></li>
       <li class="divider" tabindex="-1"></li>
-      <li><a href="#!">three</a></li>
-      <li><a href="#!"><i class="material-icons">view_module</i>four</a></li>
-      <li><a href="#!"><i class="material-icons">cloud</i>five</a></li>
+      <li id="blues"><a href="#!" id="music-2">Blues</a></li>
+      <li class="divider" tabindex="-1"></li>
+      <li id="classical"><a href="#!" id="music-5">Classical</a></li>
+      <li class="divider" tabindex="-1"></li>
+      <li id="country"><a href="#!" id="music-6">Country</a></li>
+      <li class="divider" tabindex="-1"></li>
+      <li id="dance"><a href="#!" id="music-17">Dance</a></li>
+      <li class="divider" tabindex="-1"></li>
+      <li id="hip-hop/rap"><a href="#!" id="music-18">Hip-Hop / Rap</a></li>
+      <li class="divider" tabindex="-1"></li>
+      <li id="jazz"><a href="#!" id="music-11">Jazz</a></li>
+      <li class="divider" tabindex="-1"></li>
+      <li id="latin"><a href="#!" id="music-12">Latin</a></li>
+      <li class="divider" tabindex="-1"></li>
+      <li id="pop"><a href="#!" id="music-14">Pop</a></li>
+      <li class="divider" tabindex="-1"></li>
+      <li id="r&b/soul"><a href="#!" id="music-15">R&B / Soul</a></li>
     </ul>
+
+    <!-- Dropdown Structure Genre - Audiobooks -->
+    <ul id='dropdown-genre-audiobooks' class='dropdown-content'>
+        <li id="arts+entertainment"><a href="#!">Arts & Entertainment</a></li>
+        <li class="divider" tabindex="-1"></li>
+        <li id="biographies+memoirs"><a href="#!">Biographies & Memoirs</a></li>
+        <li class="divider" tabindex="-1"></li>
+        <li id="comedy-aud"><a href="#!">Comedy</a></li>
+        <li class="divider" tabindex="-1"></li>
+        <li id="drama+poetry"><a href="#!">Drama & Poetry</a></li>
+        <li class="divider" tabindex="-1"></li>
+        <li id="fiction"><a href="#!">Fiction</a></li>
+        <li class="divider" tabindex="-1"></li>
+        <li id="mystery+thrillers"><a href="#!">Mysteries & Thrillers</a></li>
+        <li class="divider" tabindex="-1"></li>
+        <li id="nonfiction"><a href="#!">Nonfiction</a></li>
+        <li class="divider" tabindex="-1"></li>
+        <li id="romance-aud"><a href="#!">Romance</a></li>
+        <li class="divider" tabindex="-1"></li>
+        <li id="speakers+storytellers"><a href="#!">Speakers & Storytellers</a></li>
+        <li class="divider" tabindex="-1"></li>
+        <li id="travel+adventure"><a href="#!">Travel & Adventure</a></li>
+      </ul>
+
+      <!-- Dropdown Structure Genre - Movies -->
+    <ul id='dropdown-genre-audiobooks' class='dropdown-content'>
+        <li id="action+adventure"><a href="#!">Action & Adventure</a></li>
+        <li class="divider" tabindex="-1"></li>
+        <li id="comedy-mov"><a href="#!">Comedy</a></li>
+        <li class="divider" tabindex="-1"></li>
+        <li id="documentary"><a href="#!">Documentary</a></li>
+        <li class="divider" tabindex="-1"></li>
+        <li id="drama"><a href="#!">Drama</a></li>
+        <li class="divider" tabindex="-1"></li>
+        <li id="horror"><a href="#!">Horror</a></li>
+        <li class="divider" tabindex="-1"></li>
+        <li id="musicals"><a href="#!">Musicals</a></li>
+        <li class="divider" tabindex="-1"></li>
+        <li id="romance-aud"><a href="#!">Romance</a></li>
+        <li class="divider" tabindex="-1"></li>
+        <li id="sci-fi+fantasy"><a href="#!">Sci-Fi & Fantasy</a></li>
+        <li class="divider" tabindex="-1"></li>
+        <li id="thriller"><a href="#!">Thriller</a></li>
+      </ul>
 
     <!-- *** FOR 'SEARCH BY' WE WILL NEED TO CREATE ONE DROPDOWN MENU PER MEDIA TYPE AND USE A FUNCTION TO DETERMINE WHICH ONE WILL BE DISPLAYED *** -->
     <!-- Search by Dropdown -->
-    <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Seach By</a>
+    <a class='dropdown-trigger btn' href='#' data-target='dropdown-by-music'>Seach By</a>
 
-    <!-- Dropdown Structure 1 -->
-    <ul id='dropdown1' class='dropdown-content'>
-      <li><a href="#!">one</a></li>
-      <li><a href="#!">two</a></li>
+    <!-- Dropdown Structure Search-By Music -->
+    <ul id='dropdown-by-music' class='dropdown-content'>
+      <li id="musicArtist"><a href="#!">Artist</a></li>
       <li class="divider" tabindex="-1"></li>
-      <li><a href="#!">three</a></li>
-      <li><a href="#!"><i class="material-icons">view_module</i>four</a></li>
-      <li><a href="#!"><i class="material-icons">cloud</i>five</a></li>
+      <li id="musicTrack"><a href="#!">Song</a></li>
     </ul>
+
+    <!-- Dropdown Structure Search-By Audiobooks -->
+    <ul id='dropdown-by-audiobooks' class='dropdown-content'>
+        <li id="audiobookAuthor"><a href="#!">Author</a></li>
+        <li class="divider" tabindex="-1"></li>
+        <li id="audiobook"><a href="#!">Audiobook</a></li>
+      </ul>
+
+      <!-- Dropdown Structure Search-By Movies -->
+    <ul id='dropdown-by-movie' class='dropdown-content'>
+        <li id="movieArtist"><a href="#!">Artist</a></li>
+        <li class="divider" tabindex="-1"></li>
+        <li id="movie"><a href="#!">Movie</a></li>
+      </ul>
+
   </div>
   <!-- end of landing page search section -->
 
