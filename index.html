@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,6 +13,16 @@
   src="https://code.jquery.com/jquery-3.4.1.js"
   integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
   crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+  <script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+  <!-- Materialize CDN -->
   <!-- Compiled and minified CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <!-- Google Fonts -->
@@ -19,8 +30,9 @@
   <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
   <!-- CSS -->
   <link rel="stylesheet" type="text/css" href="style.css">
-
+  
 </head>
+
 <body>
   <!-- navbar -->
   <nav>
@@ -29,141 +41,132 @@
         </div>
       </nav>
 
+      <div class="container box">
+            
+            <section>
+              <h3>This is where the header goes</h3>
+              <p>Select a topic to get started</p>
+              <hr>
+            </section>
+            
+            <!-- Movies Dropdown -->
+  <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Movies</a>
+
+  <!-- Dropdown Structure 1 -->
+  <ul id='dropdown1' class='dropdown-content'>
+    <li><a href="#!">one</a></li>
+    <li><a href="#!">two</a></li>
+    <li class="divider" tabindex="-1"></li>
+    <li><a href="#!">three</a></li>
+    <li><a href="#!"><i class="material-icons">view_module</i>four</a></li>
+    <li><a href="#!"><i class="material-icons">cloud</i>five</a></li>
+  </ul>
+
+          <!-- Music Dropdown -->
+          <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Music</a>
+
+          <!-- Dropdown Structure 1 -->
+          <ul id='dropdown1' class='dropdown-content'>
+            <li><a href="#!">one</a></li>
+            <li><a href="#!">two</a></li>
+            <li class="divider" tabindex="-1"></li>
+            <li><a href="#!">three</a></li>
+            <li><a href="#!"><i class="material-icons">view_module</i>four</a></li>
+            <li><a href="#!"><i class="material-icons">cloud</i>five</a></li>
+          </ul>
+
+          <!-- Audiobooks Dropdown -->
+          <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Audiobooks</a>
+
+          <!-- Dropdown Structure 1 -->
+          <ul id='dropdown1' class='dropdown-content'>
+            <li><a href="#!">one</a></li>
+            <li><a href="#!">two</a></li>
+            <li class="divider" tabindex="-1"></li>
+            <li><a href="#!">three</a></li>
+            <li><a href="#!"><i class="material-icons">view_module</i>four</a></li>
+            <li><a href="#!"><i class="material-icons">cloud</i>five</a></li>
+          </ul>
+                  </div>
+<!-- end of landing page search section -->
+
+      <!-- THE SEARCH RESULTS SECTION -->
       <div class="container">
       <!-- header -->
 <h2>Artist List</h2>
 <small>1234 Results</small>
 <hr>
-<!-- result card one -->
-      
-        <div class="col s12 m7">
-          <div class="card medium">
-            <div class="card-image">
-              <img src="./Assets/mac.jpeg">
-              <span class="card-title">Card Title</span>
-            </div>
-            <div class=" info">
-                <b>Bio</b>
-                <hr>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut, eum officiis animi ullam illo necessitatibus esse facilis nostrum laudantium temporibus.</p>
-                <br>
-                <b>Popular Tweets</b>
-                <hr>
-                <ul>
-                    <li class="popular-tweets">Always remember... Picking the correct shirt can do unbelievable things for your day – Mac Miller</li>
-                    <br>
-                    <li class="popular-tweets">two</li>
-                    <br>
-                    <li class="popular-tweets">three</li>
-                    <br>
-                    <li class="popular-tweets">four</li>   
-                </ul>
-              </div>
-            <div class="card-action">
-              <a href="#" class="share">SHARE</a>
-            </div>
-          </div>
-        </div>
-        
-      
+      <!-- result card one -->
 
-      <!-- result card two -->
-      
         <div class="col s12 m7">
           <div class="card medium">
             <div class="card-image">
               <img src="./Assets/cardi.jpg">
               <span class="card-title">Card Title</span>
             </div>
-            <div class="info">
-              <b>Bio</b>
+            <!-- this is the latest news section  -->
+            <div class="latest-news">
+              <b>Latest News</b>
               <hr>
+              <h6>Article Title</h6>
               <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut, eum officiis animi ullam illo necessitatibus esse facilis nostrum laudantium temporibus.</p>
-              <br>
-              <b>Popular Tweets</b>
+              <label for="text">Read More</label>
               <hr>
-              <ul>
-                  <li class="popular-tweets">one</li>
-                  <br>
-                  <li class="popular-tweets">two</li>
-                  <br>
-                  <li class="popular-tweets">three</li>
-                  <br>
-                  <li class="popular-tweets">four</li>   
-              </ul>
+            <!-- second article goes here -->
+            <h6>Article Title</h6>
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut, eum officiis animi ullam illo necessitatibus esse facilis nostrum laudantium temporibus.</p>
+              <label for="text">Read More</label>
+              <hr>
+              <!-- third article goes here -->
+              <h6>Article Title</h6>
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut, eum officiis animi ullam illo necessitatibus esse facilis nostrum laudantium temporibus.</p>
+              <label for="text">Read More</label>
+              
             </div>
-            <div class="card-action">
+            <!-- <div class="card-action">
               <a href="#" class="share">SHARE</a>
-            </div>
+            </div> -->
           </div>
         </div>
-      
+
 
       <!-- result card three -->
-      
+
         <div class="col s12 m7">
           <div class="card medium">
             <div class="card-image">
               <img src="./Assets/kendrick-lamar.jpg">
               <span class="card-title">Card Title</span>
             </div>
-            <div class="info">
-                <b>Bio</b>
-                <hr>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut, eum officiis animi ullam illo necessitatibus esse facilis nostrum laudantium temporibus.</p>
-                <br>
-                <b>Popular Tweets</b>
-                <hr>
-                <ul>
-                  <li class="popular-tweets">one</li>
-                  <br>
-                  <li class="popular-tweets">two</li>
-                  <br>
-                  <li class="popular-tweets">three</li>
-                  <br>
-                  <li class="popular-tweets">four</li>                  
-                </ul>
-              </div>
-            <div class="card-action">
-              <a href="#" class="share">SHARE</a>
+            <!-- this is the latest news section  -->
+            <div class="latest-news">
+              <b>Latest News</b>
+              <hr>
+              <h6>Article Title</h6>
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut, eum officiis animi ullam illo necessitatibus esse facilis nostrum laudantium temporibus.</p>
+              <label for="text">Read More</label>
+              <hr>
+            <!-- second article goes here -->
+            <h6>Article Title</h6>
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut, eum officiis animi ullam illo necessitatibus esse facilis nostrum laudantium temporibus.</p>
+              <label for="text">Read More</label>
+              <hr>
+              <!-- third article goes here -->
+              <h6>Article Title</h6>
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut, eum officiis animi ullam illo necessitatibus esse facilis nostrum laudantium temporibus.</p>
+              <label for="text">Read More</label>
+              
             </div>
-          
-        </div>
-        </div>
-<!-- result card four -->
-      
-<div class="col s12 m7">
-    <div class="card medium">
-      <div class="card-image">
-        <img src="./Assets/bruno_mars.jpg">
-        <span class="card-title">Card Title</span>
+
       </div>
-      <div class="info">
-        <b>Bio</b>
-        <hr>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut, eum officiis animi ullam illo necessitatibus esse facilis nostrum laudantium temporibus.</p>
-        <br>
-        <b>Popular Tweets</b>
-        <hr>
-        <ul>
-            <li class="popular-tweets">one</li>
-            <br>
-            <li class="popular-tweets">two</li>
-            <br>
-            <li class="popular-tweets">three</li>
-            <br>
-            <li class="popular-tweets">four</li>   
-        </ul>
-      </div>
-      <div class="card-action">
-        <a href="#" class="share">SHARE</a>
-      </div>
-    </div>
-  </div>
-      <!-- end of container div -->
     </div>
 
+  </div>
+  <!-- end of CONTAINER div -->
+  <script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="script.js"></script>
 </body>
-<script type ="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-<!-- <script src="script.js"></script> -->
+
+
 </html>
