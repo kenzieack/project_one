@@ -2,32 +2,79 @@
 $('.dropdown-trigger').dropdown();
 
 
-// iTunes API
-var queryUrl = "https://cors-anywhere.herokuapp.com/https://itunes.apple.com/search?term=hip-hop/rap&media=music&entity=musicTrack"
+//
+// *** ITUNES API ***
+//
 
-// var queryUrl = "https://itunes.apple.com/search?term=hip-hop/rap&media=music&entity=musicTrack"
-
+// iTunes API search terms
+var queryUrl;
 var media = "";
 var term = "";
 var entity = "";
 var search = "";
 
-// "https://itunes.apple.com/search?key1=value1&key2=value2&key3=value3"
+// iTunes API results that will be passed to NYT API
+var topResults;
+var topValues;
+var searchForNYT = [];
+var moviesSearchBy;
 
+
+// create search array for NYT API
+function iTunesResults() {
+  console.log();
+  if (media === "audiobooks" || media === "music") {
+    for (i = 0; i < topValues[1].length; i++) {
+      var author = topValues[1][i].artistName;
+      console.log(author);
+      searchForNYT.push(author);
+      console.log(searchForNYT);
+    }
+  }
+  else if (media === "movies" && moviesSearchBy === "movieArtist") {
+    for (i = 0; i < topValues[1].length; i++) {
+      var author = topValues[1][i].artistName;
+      console.log(author);
+      searchForNYT.push(author);
+      console.log(searchForNYT);
+    }
+  }
+  else if (media === "movies" && moviesSearchBy === "movie") {
+    for (i = 0; i < topValues[1].length; i++) {
+      var author = topValues[1][i].trackName;
+      console.log(author);
+      searchForNYT.push(author);
+      console.log(searchForNYT);
+    }
+  }
+}
 
 
 // connecting AJAX request to iTunes API
-$.ajax({
-  url: queryUrl,
-  method: "GET"
-}).then(function (response) {
+function submit() {
+  queryUrl = "https://itunes.apple.com/search?" + search
+  console.log(queryUrl);
+  $.ajax({
+    url: queryUrl,
+    method: "GET"
+  }).then(function (response) {
 
-  var topResults = JSON.parse(response);
-  console.log(topResults);
-  var topValues = Object.values(topResults);
-  console.log(topValues[1][2].artistName);
+    topResults = JSON.parse(response);
+    console.log(topResults);
+    topValues = Object.values(topResults);
+    console.log(topValues[1][2].artistName);
+    console.log(topValues[1].length);
 
-});
+    iTunesResults();
+  });
+}
+
+
+
+
+
+
+
 
 
 // on-click event for media dropdown menu
@@ -86,7 +133,7 @@ $("#dropdown-genre-movies").on("click", function () {
 
 
 // collect data clicked on search-by and create search string
-function searchByClick (){
+function searchByClick() {
   entity = event.target.id;
   console.log(entity);
   search = "term=" + term + "&media=" + media + "&entity=" + entity;
@@ -102,6 +149,17 @@ $("#dropdown-by-audiobooks").on("click", function () {
   searchByClick();
 })
 $("#dropdown-by-movies").on("click", function () {
+  moviesSearchBy = event.target.id;
+  console.log(moviesSearchBy);
   searchByClick();
 })
 
+// on-click submit
+$("#submit-btn").on("click", function () {
+  console.log(search);
+  submit();
+})
+
+// 
+// *** END OF ITUNES API ***
+// 
