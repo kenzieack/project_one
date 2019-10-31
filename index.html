@@ -36,11 +36,11 @@
       <hr>
     </section>
 
-    <!-- INGRID's HTML  -->
 
-    <!-- Media Dropdown -->
-    <a class='dropdown-trigger btn' href='#' data-target='dropdown-media'>Media</a>
-    <!-- Dropdown Structure 1 -->
+    <!-- MEDIA Dropdown -->
+    <a class="dropdown-trigger btn" href="#" data-target="dropdown-media">Media</a>
+    
+    <!-- Dropdown Structure -->
     <ul id='dropdown-media' class='dropdown-content'>
       <li><a href="#!" id="audiobooks">audiobooks</a></li>
       <li class="divider" tabindex="-1"></li>
@@ -49,11 +49,17 @@
       <li><a href="#!" id="movies">movies</a></li>
     </ul>
 
-    <!-- Genre Dropdown -->
-    <a class='dropdown-trigger btn' href='#' data-target='dropdown-genre-music'>Genre</a>
+
+    <!-- GENRE Dropdown -->
+    <a class="dropdown-trigger btn" id="genre-dropdown" href="#" data-target="dropdown-genre">Genre</a>
+
+    <!-- Dropdown Structure Genre - Default -->
+    <ul id="dropdown-genre" class='dropdown-content default-genre'>
+      <li><a href="#!" id="default">Please select a media type first</a></li>
+    </ul>
 
     <!-- Dropdown Structure Genre - Music -->
-    <ul id='dropdown-genre-music' class='dropdown-content'>
+    <ul id="dropdown-genre-music" class='dropdown-content music-genre'>
       <li id="music-20"><a href="#!" id="alternative">Alternative</a></li>
       <li class="divider" tabindex="-1"></li>
       <li id="music-2"><a href="#!" id="blues">Blues</a></li>
@@ -76,7 +82,7 @@
     </ul>
 
     <!-- Dropdown Structure Genre - Audiobooks -->
-    <ul id='dropdown-genre-audiobooks' class='dropdown-content'>
+    <ul id="dropdown-genre-audiobooks" class='dropdown-content audiobooks-genre'>
       <li><a href="#!" id="arts+entertainment">Arts & Entertainment</a></li>
       <li class="divider" tabindex="-1"></li>
       <li><a href="#!" id="biographies+memoirs">Biographies & Memoirs</a></li>
@@ -99,7 +105,7 @@
     </ul>
 
     <!-- Dropdown Structure Genre - Movies -->
-    <ul id='dropdown-genre-audiobooks' class='dropdown-content'>
+    <ul id="dropdown-genre-movies" class='dropdown-content movies-genre'>
       <li><a href="#!" id="action+adventure">Action & Adventure</a></li>
       <li class="divider" tabindex="-1"></li>
       <li><a href="#!" id="comedy">Comedy</a></li>
@@ -119,9 +125,9 @@
       <li><a href="#!" id="thriller">Thriller</a></li>
     </ul>
 
-    <!-- *** FOR 'SEARCH BY' WE WILL NEED TO CREATE ONE DROPDOWN MENU PER MEDIA TYPE AND USE A FUNCTION TO DETERMINE WHICH ONE WILL BE DISPLAYED *** -->
-    <!-- Search by Dropdown -->
-    <a class='dropdown-trigger btn' href='#' data-target='dropdown-by-music'>Seach By</a>
+
+    <!-- SEARCH-BY Dropdown -->
+    <a class='dropdown-trigger btn' id="search-by-dropdown" href='#' data-target='dropdown-by-music'>Seach By</a>
 
     <!-- Dropdown Structure Search-By Music -->
     <ul id='dropdown-by-music' class='dropdown-content'>
@@ -138,7 +144,7 @@
     </ul>
 
     <!-- Dropdown Structure Search-By Movies -->
-    <ul id='dropdown-by-movie' class='dropdown-content'>
+    <ul id='dropdown-by-movies' class='dropdown-content'>
       <li><a href="#!" id="movieArtist">Artist</a></li>
       <li class="divider" tabindex="-1"></li>
       <li><a href="#!" id="movie">Movie</a></li>

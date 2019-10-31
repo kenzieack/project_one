@@ -58,12 +58,16 @@ h4 {
     margin: 0 auto;
 }
 
+/* KEEP THIS BEFORE .display ALWAYS */
 .dropdown-trigger {
     display: block;
     background-color: dodgerblue;
     margin-top: 25px;
     width: 20%;
-    
+}
+/* KEEP THIS AFTER .dropdown-trigger ALWAYS*/
+.no-display {
+    display: none;
 }
 
 .btn {
