@@ -1,186 +1,198 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Project 1</title>
-    <script
-    src="https://code.jquery.com/jquery-3.4.1.js"
-    integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Project 1</title>
+  <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
     crossorigin="anonymous"></script>
-    <!-- Materialize CDN -->
-    <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
-    <!-- CSS -->
-    <link rel="stylesheet" type="text/css" href="style.css">
-    
-  </head>
+  <!-- Materialize CDN -->
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+  <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
 
 <body>
   <!-- navbar -->
   <nav>
-        <div class="nav-wrapper">
-          <a href="#" class="brand-logo center">Logo</a>
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo center">Logo</a>
+    </div>
+  </nav>
+
+
+  <div class="box">
+
+    <section>
+      <h3>Welcome to...</h3>
+      <p id="p-header">Select your media to get started!</p>
+      <hr>
+    </section>
+
+    <!-- INGRID's HTML  -->
+
+    <!-- Media Dropdown -->
+    <a class='dropdown-trigger btn' href='#' data-target='dropdown-media'>Media</a>
+    <!-- Dropdown Structure 1 -->
+    <ul id='dropdown-media' class='dropdown-content'>
+      <li><a href="#!">audiobooks</a></li>
+      <li class="divider" tabindex="-1"></li>
+      <li><a href="#!">music</a></li>
+      <li class="divider" tabindex="-1"></li>
+      <li><a href="#!">movies</a></li>
+    </ul>
+
+    <!-- Genre Dropdown -->
+    <a class='dropdown-trigger btn' href='#' data-target='dropdown-genre-music'>Genre</a>
+
+    <!-- Dropdown Structure Genre - Music -->
+    <ul id='dropdown-genre-music' class='dropdown-content'>
+      <li id="alternative"><a href="#!" id="music-20">Alternative</a></li>
+      <li class="divider" tabindex="-1"></li>
+      <li id="blues"><a href="#!" id="music-2">Blues</a></li>
+      <li class="divider" tabindex="-1"></li>
+      <li id="classical"><a href="#!" id="music-5">Classical</a></li>
+      <li class="divider" tabindex="-1"></li>
+      <li id="country"><a href="#!" id="music-6">Country</a></li>
+      <li class="divider" tabindex="-1"></li>
+      <li id="dance"><a href="#!" id="music-17">Dance</a></li>
+      <li class="divider" tabindex="-1"></li>
+      <li id="hip-hop/rap"><a href="#!" id="music-18">Hip-Hop / Rap</a></li>
+      <li class="divider" tabindex="-1"></li>
+      <li id="jazz"><a href="#!" id="music-11">Jazz</a></li>
+      <li class="divider" tabindex="-1"></li>
+      <li id="latin"><a href="#!" id="music-12">Latin</a></li>
+      <li class="divider" tabindex="-1"></li>
+      <li id="pop"><a href="#!" id="music-14">Pop</a></li>
+      <li class="divider" tabindex="-1"></li>
+      <li id="r&b/soul"><a href="#!" id="music-15">R&B / Soul</a></li>
+    </ul>
+
+    <!-- Dropdown Structure Genre - Audiobooks -->
+    <ul id='dropdown-genre-audiobooks' class='dropdown-content'>
+      <li id="arts+entertainment"><a href="#!">Arts & Entertainment</a></li>
+      <li class="divider" tabindex="-1"></li>
+      <li id="biographies+memoirs"><a href="#!">Biographies & Memoirs</a></li>
+      <li class="divider" tabindex="-1"></li>
+      <li id="comedy-aud"><a href="#!">Comedy</a></li>
+      <li class="divider" tabindex="-1"></li>
+      <li id="drama+poetry"><a href="#!">Drama & Poetry</a></li>
+      <li class="divider" tabindex="-1"></li>
+      <li id="fiction"><a href="#!">Fiction</a></li>
+      <li class="divider" tabindex="-1"></li>
+      <li id="mystery+thrillers"><a href="#!">Mysteries & Thrillers</a></li>
+      <li class="divider" tabindex="-1"></li>
+      <li id="nonfiction"><a href="#!">Nonfiction</a></li>
+      <li class="divider" tabindex="-1"></li>
+      <li id="romance-aud"><a href="#!">Romance</a></li>
+      <li class="divider" tabindex="-1"></li>
+      <li id="speakers+storytellers"><a href="#!">Speakers & Storytellers</a></li>
+      <li class="divider" tabindex="-1"></li>
+      <li id="travel+adventure"><a href="#!">Travel & Adventure</a></li>
+    </ul>
+
+    <!-- Dropdown Structure Genre - Movies -->
+    <ul id='dropdown-genre-audiobooks' class='dropdown-content'>
+      <li id="action+adventure"><a href="#!">Action & Adventure</a></li>
+      <li class="divider" tabindex="-1"></li>
+      <li id="comedy-mov"><a href="#!">Comedy</a></li>
+      <li class="divider" tabindex="-1"></li>
+      <li id="documentary"><a href="#!">Documentary</a></li>
+      <li class="divider" tabindex="-1"></li>
+      <li id="drama"><a href="#!">Drama</a></li>
+      <li class="divider" tabindex="-1"></li>
+      <li id="horror"><a href="#!">Horror</a></li>
+      <li class="divider" tabindex="-1"></li>
+      <li id="musicals"><a href="#!">Musicals</a></li>
+      <li class="divider" tabindex="-1"></li>
+      <li id="romance-aud"><a href="#!">Romance</a></li>
+      <li class="divider" tabindex="-1"></li>
+      <li id="sci-fi+fantasy"><a href="#!">Sci-Fi & Fantasy</a></li>
+      <li class="divider" tabindex="-1"></li>
+      <li id="thriller"><a href="#!">Thriller</a></li>
+    </ul>
+
+    <!-- *** FOR 'SEARCH BY' WE WILL NEED TO CREATE ONE DROPDOWN MENU PER MEDIA TYPE AND USE A FUNCTION TO DETERMINE WHICH ONE WILL BE DISPLAYED *** -->
+    <!-- Search by Dropdown -->
+    <a class='dropdown-trigger btn' href='#' data-target='dropdown-by-music'>Seach By</a>
+
+    <!-- Dropdown Structure Search-By Music -->
+    <ul id='dropdown-by-music' class='dropdown-content'>
+      <li id="musicArtist"><a href="#!">Artist</a></li>
+      <li class="divider" tabindex="-1"></li>
+      <li id="musicTrack"><a href="#!">Song</a></li>
+    </ul>
+
+    <!-- Dropdown Structure Search-By Audiobooks -->
+    <ul id='dropdown-by-audiobooks' class='dropdown-content'>
+      <li id="audiobookAuthor"><a href="#!">Author</a></li>
+      <li class="divider" tabindex="-1"></li>
+      <li id="audiobook"><a href="#!">Audiobook</a></li>
+    </ul>
+
+    <!-- Dropdown Structure Search-By Movies -->
+    <ul id='dropdown-by-movie' class='dropdown-content'>
+      <li id="movieArtist"><a href="#!">Artist</a></li>
+      <li class="divider" tabindex="-1"></li>
+      <li id="movie"><a href="#!">Movie</a></li>
+    </ul>
+
+  </div>
+
+  <!-- end of landing page search section -->
+  <!-- END OF INGRID HTML -->
+
+  <!-- THE SEARCH RESULTS SECTION -->
+  <div class="container">
+    <!-- header -->
+    <h4>Search Results</h4>
+    <small>5 results</small>
+    <hr>
+    <!-- result card one -->
+
+    <div class="col s12 m7">
+      <div class="card small">
+        <div class="card-image">
+          <img src="./Assets/cardi.jpg">
+          <span class="card-title">Card Title</span>
         </div>
-      </nav>
-
-
-      <div class="box">
-            
-            <section>
-              <h3>Welcome to...</h3>
-              <p id="p-header">Select your media to get started!</p>
-              <hr>
-            </section>
-            
-            <!-- INGRID's HTML  -->
-<!-- Genre Dropdown -->
-<a class='dropdown-trigger btn' href='#' data-target='dropdown-genre-music'>Genre</a>
-
-<!-- Dropdown Structure Genre - Music -->
-<ul id='dropdown-genre-music' class='dropdown-content'>
-  <li id="alternative"><a href="#!" id="music-20">Alternative</a></li>
-  <li class="divider" tabindex="-1"></li>
-  <li id="blues"><a href="#!" id="music-2">Blues</a></li>
-  <li class="divider" tabindex="-1"></li>
-  <li id="classical"><a href="#!" id="music-5">Classical</a></li>
-  <li class="divider" tabindex="-1"></li>
-  <li id="country"><a href="#!" id="music-6">Country</a></li>
-  <li class="divider" tabindex="-1"></li>
-  <li id="dance"><a href="#!" id="music-17">Dance</a></li>
-  <li class="divider" tabindex="-1"></li>
-  <li id="hip-hop/rap"><a href="#!" id="music-18">Hip-Hop / Rap</a></li>
-  <li class="divider" tabindex="-1"></li>
-  <li id="jazz"><a href="#!" id="music-11">Jazz</a></li>
-  <li class="divider" tabindex="-1"></li>
-  <li id="latin"><a href="#!" id="music-12">Latin</a></li>
-  <li class="divider" tabindex="-1"></li>
-  <li id="pop"><a href="#!" id="music-14">Pop</a></li>
-  <li class="divider" tabindex="-1"></li>
-  <li id="r&b/soul"><a href="#!" id="music-15">R&B / Soul</a></li>
-</ul>
-
-<!-- Dropdown Structure Genre - Audiobooks -->
-<ul id='dropdown-genre-audiobooks' class='dropdown-content'>
-    <li id="arts+entertainment"><a href="#!">Arts & Entertainment</a></li>
-    <li class="divider" tabindex="-1"></li>
-    <li id="biographies+memoirs"><a href="#!">Biographies & Memoirs</a></li>
-    <li class="divider" tabindex="-1"></li>
-    <li id="comedy-aud"><a href="#!">Comedy</a></li>
-    <li class="divider" tabindex="-1"></li>
-    <li id="drama+poetry"><a href="#!">Drama & Poetry</a></li>
-    <li class="divider" tabindex="-1"></li>
-    <li id="fiction"><a href="#!">Fiction</a></li>
-    <li class="divider" tabindex="-1"></li>
-    <li id="mystery+thrillers"><a href="#!">Mysteries & Thrillers</a></li>
-    <li class="divider" tabindex="-1"></li>
-    <li id="nonfiction"><a href="#!">Nonfiction</a></li>
-    <li class="divider" tabindex="-1"></li>
-    <li id="romance-aud"><a href="#!">Romance</a></li>
-    <li class="divider" tabindex="-1"></li>
-    <li id="speakers+storytellers"><a href="#!">Speakers & Storytellers</a></li>
-    <li class="divider" tabindex="-1"></li>
-    <li id="travel+adventure"><a href="#!">Travel & Adventure</a></li>
-  </ul>
-
-  <!-- Dropdown Structure Genre - Movies -->
-<ul id='dropdown-genre-audiobooks' class='dropdown-content'>
-    <li id="action+adventure"><a href="#!">Action & Adventure</a></li>
-    <li class="divider" tabindex="-1"></li>
-    <li id="comedy-mov"><a href="#!">Comedy</a></li>
-    <li class="divider" tabindex="-1"></li>
-    <li id="documentary"><a href="#!">Documentary</a></li>
-    <li class="divider" tabindex="-1"></li>
-    <li id="drama"><a href="#!">Drama</a></li>
-    <li class="divider" tabindex="-1"></li>
-    <li id="horror"><a href="#!">Horror</a></li>
-    <li class="divider" tabindex="-1"></li>
-    <li id="musicals"><a href="#!">Musicals</a></li>
-    <li class="divider" tabindex="-1"></li>
-    <li id="romance-aud"><a href="#!">Romance</a></li>
-    <li class="divider" tabindex="-1"></li>
-    <li id="sci-fi+fantasy"><a href="#!">Sci-Fi & Fantasy</a></li>
-    <li class="divider" tabindex="-1"></li>
-    <li id="thriller"><a href="#!">Thriller</a></li>
-  </ul>
-
-<!-- *** FOR 'SEARCH BY' WE WILL NEED TO CREATE ONE DROPDOWN MENU PER MEDIA TYPE AND USE A FUNCTION TO DETERMINE WHICH ONE WILL BE DISPLAYED *** -->
-<!-- Search by Dropdown -->
-<a class='dropdown-trigger btn' href='#' data-target='dropdown-by-music'>Seach By</a>
-
-<!-- Dropdown Structure Search-By Music -->
-<ul id='dropdown-by-music' class='dropdown-content'>
-  <li id="musicArtist"><a href="#!">Artist</a></li>
-  <li class="divider" tabindex="-1"></li>
-  <li id="musicTrack"><a href="#!">Song</a></li>
-</ul>
-
-<!-- Dropdown Structure Search-By Audiobooks -->
-<ul id='dropdown-by-audiobooks' class='dropdown-content'>
-    <li id="audiobookAuthor"><a href="#!">Author</a></li>
-    <li class="divider" tabindex="-1"></li>
-    <li id="audiobook"><a href="#!">Audiobook</a></li>
-  </ul>
-
-  <!-- Dropdown Structure Search-By Movies -->
-<ul id='dropdown-by-movie' class='dropdown-content'>
-    <li id="movieArtist"><a href="#!">Artist</a></li>
-    <li class="divider" tabindex="-1"></li>
-    <li id="movie"><a href="#!">Movie</a></li>
-  </ul>
-
-</div>
-
-<!-- end of landing page search section -->
-<!-- END OF INGRID HTML -->
-
-      <!-- THE SEARCH RESULTS SECTION -->
-      <div class="container">
-      <!-- header -->
-<h4>Search Results</h4>
-<small>5 results</small>
-<hr>
-      <!-- result card one -->
-
-        <div class="col s12 m7">
-          <div class="card small">
-            <div class="card-image">
-              <img src="./Assets/cardi.jpg">
-              <span class="card-title">Card Title</span>
-            </div>
-            <!-- this is the latest news section  -->
-            <div class="latest-news">
-              <b>Latest News</b>
-              <hr>
-              <h6 class="article-title">Article Title</h6>
-              <p class="article">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut, eum officiis animi ullam illo necessitatibus esse facilis nostrum laudantium temporibus.</p>
-              <label for="text">Read More</label>
-            </div>
-          </div>
+        <!-- this is the latest news section  -->
+        <div class="latest-news">
+          <b>Latest News</b>
+          <hr>
+          <h6 class="article-title">Article Title</h6>
+          <p class="article">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut, eum officiis animi ullam
+            illo necessitatibus esse facilis nostrum laudantium temporibus.</p>
+          <label for="text">Read More</label>
         </div>
+      </div>
+    </div>
 
 
-      <!-- result card two -->
+    <!-- result card two -->
 
-        <div class="col s12 m7">
-          <div class="card small">
-            <div class="card-image">
-              <img src="./Assets/kendrick-lamar.jpg">
-              <span class="card-title">Card Title</span>
-            </div>
-            <!-- this is the latest news section  -->
-            <div class="latest-news">
-              <b>Latest News</b>
-              <hr>
-              <h6>Article Title</h6>
-              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut, eum officiis animi ullam illo necessitatibus esse facilis nostrum laudantium temporibus.</p>
-              <label for="text">Read More</label>     
-            </div>
+    <div class="col s12 m7">
+      <div class="card small">
+        <div class="card-image">
+          <img src="./Assets/kendrick-lamar.jpg">
+          <span class="card-title">Card Title</span>
+        </div>
+        <!-- this is the latest news section  -->
+        <div class="latest-news">
+          <b>Latest News</b>
+          <hr>
+          <h6>Article Title</h6>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut, eum officiis animi ullam illo necessitatibus
+            esse facilis nostrum laudantium temporibus.</p>
+          <label for="text">Read More</label>
+        </div>
       </div>
     </div>
 
@@ -197,49 +209,52 @@
           <b>Latest News</b>
           <hr>
           <h6>Article Title</h6>
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut, eum officiis animi ullam illo necessitatibus esse facilis nostrum laudantium temporibus.</p>
-          <label for="text">Read More</label>     
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut, eum officiis animi ullam illo necessitatibus
+            esse facilis nostrum laudantium temporibus.</p>
+          <label for="text">Read More</label>
         </div>
-  </div>
-</div>
-
-<!-- result card four -->
-
-<div class="col s12 m7">
-  <div class="card small">
-    <div class="card-image">
-      <img src="./Assets/kendrick-lamar.jpg">
-      <span class="card-title">Card Title</span>
+      </div>
     </div>
-    <!-- this is the latest news section  -->
-    <div class="latest-news">
-      <b>Latest News</b>
-      <hr>
-      <h6>Article Title</h6>
-      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut, eum officiis animi ullam illo necessitatibus esse facilis nostrum laudantium temporibus.</p>
-      <label for="text">Read More</label>     
-    </div>
-</div>
-</div>
 
-<!-- result card five -->
+    <!-- result card four -->
 
-<div class="col s12 m7">
-  <div class="card small">
-    <div class="card-image">
-      <img src="./Assets/kendrick-lamar.jpg">
-      <span class="card-title">Card Title</span>
+    <div class="col s12 m7">
+      <div class="card small">
+        <div class="card-image">
+          <img src="./Assets/kendrick-lamar.jpg">
+          <span class="card-title">Card Title</span>
+        </div>
+        <!-- this is the latest news section  -->
+        <div class="latest-news">
+          <b>Latest News</b>
+          <hr>
+          <h6>Article Title</h6>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut, eum officiis animi ullam illo necessitatibus
+            esse facilis nostrum laudantium temporibus.</p>
+          <label for="text">Read More</label>
+        </div>
+      </div>
     </div>
-    <!-- this is the latest news section  -->
-    <div class="latest-news">
-      <b>Latest News</b>
-      <hr>
-      <h6>Article Title</h6>
-      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut, eum officiis animi ullam illo necessitatibus esse facilis nostrum laudantium temporibus.</p>
-      <label for="text">Read More</label>     
+
+    <!-- result card five -->
+
+    <div class="col s12 m7">
+      <div class="card small">
+        <div class="card-image">
+          <img src="./Assets/kendrick-lamar.jpg">
+          <span class="card-title">Card Title</span>
+        </div>
+        <!-- this is the latest news section  -->
+        <div class="latest-news">
+          <b>Latest News</b>
+          <hr>
+          <h6>Article Title</h6>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut, eum officiis animi ullam illo necessitatibus
+            esse facilis nostrum laudantium temporibus.</p>
+          <label for="text">Read More</label>
+        </div>
+      </div>
     </div>
-</div>
-</div>
 
   </div>
   <!-- end of CONTAINER div -->
