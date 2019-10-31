@@ -1,13 +1,10 @@
 body {
     font-family: "gotham";
     background-color: rgb(231, 231, 231);
+    width: 100%;
 }
 
-.container {
-    margin: 0 auto;
-    width: 70%;
-    
-}
+
 
 .nav-wrapper {
     background-color: dodgerblue;
@@ -22,8 +19,8 @@ body {
 }
 
 .card {
-    width: 45%;
-    margin: 2%;
+    width: 30%;
+    margin: 1%;
     display: block;
     float: left;
     height: 2% !important;
@@ -34,44 +31,42 @@ body {
     margin: 10px auto;
 }
 
-.card-action {
-    text-align: center;
-}
-
-.share {
-    color: dodgerblue !important;
-}
-
-.share:hover {
-    color: white !important;
-    background-color: dodgerblue;
-    padding: 10px;
-    border-radius: 30px;
-}
 h3 {
     font-weight: 700;
     margin-bottom: 5px;
     margin-top: 15px;
+    text-align: center;
 }
 
-h2 {
-    font-weight: 500;
-
+#p-header {
+    text-align: center;
 }
-.popular-tweets:hover {
-    color: dodgerblue;
+
+h4 {
+    font-weight: 700;
+
 }
 
 .box {
+    background-image: url(./Assets/media-banner.jpg);
+    display: block;
+    align-content: center;
     background-color: white;
     box-shadow: 2px 2px 8px black;
-    padding: 20px;
-    margin: 25px auto;
+    padding: 50px;
+    height: 400px !important;
+    margin: 0 auto;
 }
 
 .dropdown-trigger {
+    display: block;
     background-color: dodgerblue;
-    margin: 15px 40px;
+    margin-top: 25px;
     width: 20%;
     
+}
+
+.btn {
+    margin: 25px auto;
+    width: 60%;
 }
