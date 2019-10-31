@@ -71,12 +71,6 @@ function submit() {
 
 
 
-
-
-
-
-
-
 // on-click event for media dropdown menu
 $("#dropdown-media").on("click", function () {
   media = event.target.id;
@@ -162,4 +156,31 @@ $("#submit-btn").on("click", function () {
 
 // 
 // *** END OF ITUNES API ***
-// 
+
+// *** NYT API ***
+var apiKey = "C3dkR8GWRlTGbLGqtwwnOCS620BU58vY";
+var limit = 5
+var queryUrlNYT = `https://api.nytimes.com/svc/search/v2/articlesearch.json?q=${searchForNYT}&api-key=${apiKey}`;
+var articleArray = [];
+
+
+// Ajax call for connecting NYT API
+$.ajax({
+  url: queryUrlNYT,
+  method: "GET"
+}).then(function (response) {
+  for (i = 0; i < limit; i++) {
+      
+      var article = response.response.docs[i];
+      //console.log(response.response.docs[i]);
+    
+      var articleObj =  {
+        author: article.byline.original,
+
+          title: article.headline.main,
+
+              url : article.web_url
+
+      };
+      articleArray.push(articleObj);
+
