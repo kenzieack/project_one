@@ -47,6 +47,7 @@ function iTunesResults() {
       console.log(searchForNYT);
     }
   }
+  NYTresponse();
 }
 
 
@@ -60,15 +61,12 @@ function submit() {
   }).then(function (response) {
 
     topResults = JSON.parse(response);
-    console.log(topResults);
     topValues = Object.values(topResults);
-    console.log(topValues[1][2].artistName);
-    console.log(topValues[1].length);
 
     iTunesResults();
   });
+  // NYTresponse();
 }
-
 
 
 // on-click event for media dropdown menu
@@ -153,34 +151,56 @@ $("#submit-btn").on("click", function () {
   console.log(search);
   submit();
 })
-
 // 
 // *** END OF ITUNES API ***
+// 
 
+
+
+// 
 // *** NYT API ***
+// 
 var apiKey = "C3dkR8GWRlTGbLGqtwwnOCS620BU58vY";
 var limit = 5
 var queryUrlNYT = `https://api.nytimes.com/svc/search/v2/articlesearch.json?q=${searchForNYT}&api-key=${apiKey}`;
 var articleArray = [];
 
-
-// Ajax call for connecting NYT API
-$.ajax({
-  url: queryUrlNYT,
-  method: "GET"
-}).then(function (response) {
-  for (i = 0; i < limit; i++) {
+// function to call NYT API once all info from iTunes has been collected
+// function is being called inside iTunesResults()
+function NYTresponse() {
+  // Ajax call for connecting NYT API
+  $.ajax({
+    url: queryUrlNYT,
+    method: "GET"
+  }).then(function (response) {
+    console.log(response);
+    for (i = 0; i < limit; i++) {
       
       var article = response.response.docs[i];
-      //console.log(response.response.docs[i]);
-    
-      var articleObj =  {
+      console.log(response.response.docs[i]);
+      
+      var articleObj = {
         author: article.byline.original,
-
-          title: article.headline.main,
-
-              url : article.web_url
-
+        
+        title: article.headline.main,
+        
+        url: article.web_url
+        
       };
       articleArray.push(articleObj);
+      
+    }
+  })
+  console.log(articleArray);
 
+// CODE TO DYNAMICALLY POPULATE THE RESULTS SHOULD BE GENERATED HERE
+
+
+
+
+
+// AFTER THE RESULTS HAS CHANGED TO INCORPORATE THE RIGHT INFORMATION
+// THEN THIS LINE WILL RUN TO DISPLAY THE RESULTS SECTION
+$("#results").removeAttr("class", "no-display");
+
+}
