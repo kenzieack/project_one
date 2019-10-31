@@ -25,15 +25,15 @@
   <!-- navbar -->
   <nav>
         <div class="nav-wrapper">
-          <a href="#" class="brand-logo center"><i class="fab fa-soundcloud"></i></a>
+          <a href="#" class="brand-logo center">Logo</a>
         </div>
       </nav>
 
-      <div class="container box">
+      <div class="box">
             
             <section>
-              <h3>This is where the header goes</h3>
-              <p>Select your media to get started!</p>
+              <h3>Welcome to...</h3>
+              <p id="p-header">Select your media to get started!</p>
               <hr>
             </section>
             
@@ -42,38 +42,31 @@
 
   <!-- Dropdown Structure 1 -->
   <ul id='dropdown1' class='dropdown-content'>
-    <li><a href="#!">one</a></li>
-    <li><a href="#!">two</a></li>
+    <li><a href="#!" id="audiobook">Audiobook</a></li>
     <li class="divider" tabindex="-1"></li>
-    <li><a href="#!">three</a></li>
-    <li><a href="#!"><i class="material-icons">view_module</i>four</a></li>
-    <li><a href="#!"><i class="material-icons">cloud</i>five</a></li>
+    <li><a href="#!" id="music">Music</a></li>
+    <li class="divider" tabindex="-1"></li>
+    <li><a href="#!" id="movies">Movies</a></li>
   </ul>
 
           <!-- Genre Dropdown -->
-          <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Genre</a>
+          <a class='dropdown-trigger btn' href='#' data-target='dropdown2'>Genre</a>
 
-          <!-- Dropdown Structure 1 -->
-          <ul id='dropdown1' class='dropdown-content'>
-            <li><a href="#!">one</a></li>
-            <li><a href="#!">two</a></li>
+          <!-- Dropdown Structure 2 -->
+          <ul id='dropdown2' class='dropdown-content'>
+            <li><a href="#!" id="media-info">Media</a></li>
             <li class="divider" tabindex="-1"></li>
-            <li><a href="#!">three</a></li>
-            <li><a href="#!"><i class="material-icons">view_module</i>four</a></li>
-            <li><a href="#!"><i class="material-icons">cloud</i>five</a></li>
+            <li><a href="#!" id="genre-info">Genre</a></li>
           </ul>
 
           <!-- Search by Dropdown -->
-          <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Seach By</a>
+          <a class='dropdown-trigger btn' href='#' data-target='dropdown3'>Search By</a>
 
-          <!-- Dropdown Structure 1 -->
-          <ul id='dropdown1' class='dropdown-content'>
-            <li><a href="#!">one</a></li>
-            <li><a href="#!">two</a></li>
+          <!-- Dropdown Structure 3 -->
+          <ul id='dropdown3' class='dropdown-content'>
+            <li class="media-info"><a href="#!">Media</a></li>
             <li class="divider" tabindex="-1"></li>
-            <li><a href="#!">three</a></li>
-            <li><a href="#!"><i class="material-icons">view_module</i>four</a></li>
-            <li><a href="#!"><i class="material-icons">cloud</i>five</a></li>
+            <li class="genre-info"><a href="#!">Genre</a></li>
           </ul>
                   </div>
 <!-- end of landing page search section -->
@@ -81,13 +74,13 @@
       <!-- THE SEARCH RESULTS SECTION -->
       <div class="container">
       <!-- header -->
-<h2>Artist List</h2>
-<small>1234 Results</small>
+<h4>Search Results</h4>
+<small>5 results</small>
 <hr>
       <!-- result card one -->
 
         <div class="col s12 m7">
-          <div class="card medium">
+          <div class="card small">
             <div class="card-image">
               <img src="./Assets/cardi.jpg">
               <span class="card-title">Card Title</span>
@@ -99,20 +92,15 @@
               <h6 class="article-title">Article Title</h6>
               <p class="article">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut, eum officiis animi ullam illo necessitatibus esse facilis nostrum laudantium temporibus.</p>
               <label for="text">Read More</label>
-              
-              
             </div>
-            <!-- <div class="card-action">
-              <a href="#" class="share">SHARE</a>
-            </div> -->
           </div>
         </div>
 
 
-      <!-- result card three -->
+      <!-- result card two -->
 
         <div class="col s12 m7">
-          <div class="card medium">
+          <div class="card small">
             <div class="card-image">
               <img src="./Assets/kendrick-lamar.jpg">
               <span class="card-title">Card Title</span>
@@ -123,12 +111,67 @@
               <hr>
               <h6>Article Title</h6>
               <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut, eum officiis animi ullam illo necessitatibus esse facilis nostrum laudantium temporibus.</p>
-              <label for="text">Read More</label>
-              
+              <label for="text">Read More</label>     
             </div>
-
       </div>
     </div>
+
+    <!-- result card three -->
+
+    <div class="col s12 m7">
+      <div class="card small">
+        <div class="card-image">
+          <img src="./Assets/kendrick-lamar.jpg">
+          <span class="card-title">Card Title</span>
+        </div>
+        <!-- this is the latest news section  -->
+        <div class="latest-news">
+          <b>Latest News</b>
+          <hr>
+          <h6>Article Title</h6>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut, eum officiis animi ullam illo necessitatibus esse facilis nostrum laudantium temporibus.</p>
+          <label for="text">Read More</label>     
+        </div>
+  </div>
+</div>
+
+<!-- result card four -->
+
+<div class="col s12 m7">
+  <div class="card small">
+    <div class="card-image">
+      <img src="./Assets/kendrick-lamar.jpg">
+      <span class="card-title">Card Title</span>
+    </div>
+    <!-- this is the latest news section  -->
+    <div class="latest-news">
+      <b>Latest News</b>
+      <hr>
+      <h6>Article Title</h6>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut, eum officiis animi ullam illo necessitatibus esse facilis nostrum laudantium temporibus.</p>
+      <label for="text">Read More</label>     
+    </div>
+</div>
+</div>
+
+<!-- result card five -->
+
+<div class="col s12 m7">
+  <div class="card small">
+    <div class="card-image">
+      <img src="./Assets/kendrick-lamar.jpg">
+      <span class="card-title">Card Title</span>
+    </div>
+    <!-- this is the latest news section  -->
+    <div class="latest-news">
+      <b>Latest News</b>
+      <hr>
+      <h6>Article Title</h6>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut, eum officiis animi ullam illo necessitatibus esse facilis nostrum laudantium temporibus.</p>
+      <label for="text">Read More</label>     
+    </div>
+</div>
+</div>
 
   </div>
   <!-- end of CONTAINER div -->
