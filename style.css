@@ -1,86 +1,109 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+
 body {
-    font-family: "gotham";
+    font-family: "Poppins";
     background-color: rgb(231, 231, 231);
     width: 100%;
-}
-
-
-
-.nav-wrapper {
+  }
+  
+  
+  
+  .nav-wrapper {
     background-color: dodgerblue;
-}
-
-.card-title {
+  }
+  
+  .card-title {
     background-color: dodgerblue;
     padding: 5px !important;
     border-radius: 50px;
     margin: 8px;
     font-size: 16px !important;
-}
-
-.card {
+  }
+  
+  .card {
     width: 30%;
-    margin: 1%;
-    display: block;
+    margin: 20px 1%;
     float: left;
+    display: block;
+    color: black;
     height: 2% !important;
-}
-
-.latest-news {
+  }
+  
+  .latest-news {
     width: 90%;
     margin: 10px auto;
-}
-
-h3 {
+  }
+  
+  h3 {
     font-weight: 700;
     margin-bottom: 5px;
     margin-top: 15px;
     text-align: center;
-}
-
-#p-header {
+  }
+  
+  #p-header {
     text-align: center;
-}
-
-h4 {
+  }
+  
+  h4 {
     font-weight: 700;
-
-}
-
-.box {
+  
+  }
+  
+  .box {
     background-image: url(./Assets/media-banner.jpg);
     display: block;
     align-content: center;
     background-color: white;
     box-shadow: 2px 2px 8px black;
-    padding: 15px;
+    padding: 30px;
     height: 400px !important;
     margin: 0 auto;
-}
-
-/* KEEP THIS BEFORE .display ALWAYS */
-.dropdown-trigger {
+  }
+  
+  .dropdown-trigger {
     display: block;
     background-color: dodgerblue;
     margin-top: 25px;
     width: 20%;
-}
-/* KEEP THIS AFTER .dropdown-trigger ALWAYS*/
-.no-display {
-    display: none;
-}
-
-.btn {
-    margin: 25px auto;
-    width: 60%;
-}
+    
+  }
+  
+  .btn {
+    
+    float: left;
+    margin: 2%;
+  }
+  
+  .carousel {
+    height: 600px !important;
+  }
+  
+  p, b, .article-title {
+    text-align: left;
+  }
 
 #submit-btn {
-    padding: 10px;
+  padding: 10px;
+  display: block;
+  background-color: rgb(59, 59, 224);
+  border-radius: 25px;
+  margin: 23px auto;
+  width: 10%;
+  color: white;
+}
+
+#bender {
     display: block;
-    background-color: rgb(59, 59, 224);
-    border-radius: 25px;
-    margin: 0 auto;
-    width: 10%;
-    color: white;
+    margin: 10px auto;
+}
+
+.h6-header {
+    display: block;
+    text-align: center;
+    margin: 20px;
+}
+
+.article-title {
+    font-weight: 900 !important;
 }
