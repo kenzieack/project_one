@@ -21,27 +21,27 @@ var moviesSearchBy;
 
 // create search array for NYT API
 function iTunesResults() {
-    console.log();
+    // console.log();
     if (media === "audiobooks" || media === "music") {
         for (i = 0; i < topValues[1].length; i++) {
             var author = topValues[1][i].artistName;
-            console.log(author);
+            // console.log(author);
             searchForNYT.push(author);
-            console.log(searchForNYT);
+            // console.log(searchForNYT);
         }
     } else if (media === "movies" && moviesSearchBy === "movieArtist") {
         for (i = 0; i < topValues[1].length; i++) {
             var author = topValues[1][i].artistName;
-            console.log(author);
+            // console.log(author);
             searchForNYT.push(author);
-            console.log(searchForNYT);
+            // console.log(searchForNYT);
         }
     } else if (media === "movies" && moviesSearchBy === "movie") {
         for (i = 0; i < topValues[1].length; i++) {
             var author = topValues[1][i].trackName;
-            console.log(author);
+            // console.log(author);
             searchForNYT.push(author);
-            console.log(searchForNYT);
+            // console.log(searchForNYT);
         }
     }
     NYTresponse1();
@@ -192,11 +192,18 @@ function NYTresponse1() {
             };
             articleArray1.push(articleObj);
         }
+        $("#heading1").text(searchForNYT[0]);
+        $("#head1art0").text(articleArray1[0].title)
+        $("#head1art1").text(articleArray1[1].title)
+        $("#head1art2").text(articleArray1[2].title)
+        $("#head1art0").attr("href", articleArray1[0].url);
+        $("#head1art1").attr("href", articleArray1[1].url);
+        $("#head1art2").attr("href", articleArray1[2].url);
     })
     console.log(articleArray1);
 
     // CODE TO DYNAMICALLY POPULATE THE RESULTS SHOULD BE GENERATED HERE
-    finalResults();
+    // finalResults1();
 
 
 
@@ -228,12 +235,33 @@ function NYTresponse2() {
                 url: article.web_url
             };
             articleArray2.push(articleObj);
+
         }
+        console.log(articleArray2)
+        console.log(articleArray2[0]);
+        console.log(articleArray2[0].title);
+
+        $("#heading2").text(searchForNYT[1]);
+        $("#head2art0").text(articleArray2[0].title)
+        $("#head2art1").text(articleArray2[1].title)
+        $("#head2art2").text(articleArray2[2].title)
+        $("#head2art0").attr("href", articleArray2[0].url);
+        $("#head2art1").attr("href", articleArray2[1].url);
+        $("#head2art2").attr("href", articleArray2[2].url);
+
+
+        // // $(`#head2art${j}`).text(`articleArray2[${j}].title`);
+        // // $(`#head2art${j}`).attr("href", `articleArray2[${j}].url`);
+        // // }
+
+
+        // return articleArray2;
     })
-    console.log(articleArray2);
+
+    console.log(articleArray2[0]);
 
     // CODE TO DYNAMICALLY POPULATE THE RESULTS SHOULD BE GENERATED HERE
-    finalResults();
+    // finalResults2();
 
 
 
@@ -266,11 +294,18 @@ function NYTresponse3() {
             };
             articleArray3.push(articleObj);
         }
+        $("#heading3").text(searchForNYT[2]);
+        $("#head3art0").text(articleArray3[0].title)
+        $("#head3art1").text(articleArray3[1].title)
+        $("#head3art2").text(articleArray3[2].title)
+        $("#head3art0").attr("href", articleArray3[0].url);
+        $("#head3art1").attr("href", articleArray3[1].url);
+        $("#head3art2").attr("href", articleArray3[2].url);
     })
     console.log(articleArray3);
 
     // CODE TO DYNAMICALLY POPULATE THE RESULTS SHOULD BE GENERATED HERE
-    finalResults();
+    // finalResults3();
 
 
 
@@ -303,11 +338,18 @@ function NYTresponse4() {
             };
             articleArray4.push(articleObj);
         }
+        $("#heading4").text(searchForNYT[3]);
+        $("#head4art0").text(articleArray4[0].title)
+        $("#head4art1").text(articleArray4[1].title)
+        $("#head4art2").text(articleArray4[2].title)
+        $("#head4art0").attr("href", articleArray4[0].url);
+        $("#head4art1").attr("href", articleArray4[1].url);
+        $("#head4art2").attr("href", articleArray4[2].url);
     })
     console.log(articleArray4);
 
     // CODE TO DYNAMICALLY POPULATE THE RESULTS SHOULD BE GENERATED HERE
-    finalResults();
+    // finalResults4();
 
 
 
@@ -340,11 +382,18 @@ function NYTresponse5() {
             };
             articleArray5.push(articleObj);
         }
+        $("#heading5").text(searchForNYT[4]);
+        $("#head5art0").text(articleArray5[0].title)
+        $("#head5art1").text(articleArray5[1].title)
+        $("#head5art2").text(articleArray5[2].title)
+        $("#head5art0").attr("href", articleArray5[0].url);
+        $("#head5art1").attr("href", articleArray5[1].url);
+        $("#head5art2").attr("href", articleArray5[2].url);
     })
-    console.log(articleArray5);
+    console.log("this is article 5" + articleArray5);
 
     // CODE TO DYNAMICALLY POPULATE THE RESULTS SHOULD BE GENERATED HERE
-    finalResults();
+    // finalResults5();
 
 
 
@@ -355,11 +404,23 @@ function NYTresponse5() {
 
 
 // function to dynamically generate the results
-function finalResults() {
-    for (i = 1; i < 6; i++) {
-        $(`#heading${i}`).text(searchForNYT[i]);
-    }
+function finalResults1() {
+    $("#heading1").text(searchForNYT[0]);
+    // for (i = 1; i < 6; i++) {
+    //     $(`#heading${i}`).text(searchForNYT[i]);
+    $("#head2art0").text(articleArray1[0].title);
+    // $("#head2art0").attr("href", "articleArray1[0].url`);
 
+    console.log(articleArray1);
+    console.log(Object.keys(articleArray1))
+    console.log(articleArray1[0]);
+
+    // for (var j = 0; j < limit; j++) {
+    //     console.log(`articleArray1[${j}]`);
+    //     $(`#head1art${j}`).text(`articleArray1[${j}].title`);
+    //     $(`#head1art${j}`).attr("href", `articleArray1[${j}].url`);
+
+    // }
 }
 
 
