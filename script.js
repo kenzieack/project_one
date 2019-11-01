@@ -54,7 +54,7 @@ function iTunesResults() {
 
 // connecting AJAX request to iTunes API
 function submit() {
-    queryUrl = "https://itunes.apple.com/search?" + search
+    queryUrl = "https://cors-anywhere.herokuapp.com/https://itunes.apple.com/search?" + search
     console.log(queryUrl);
     $.ajax({
         url: queryUrl,
@@ -171,7 +171,7 @@ var articleArray5 = [];
 function NYTresponse1() {
     searchForNYTAPI = searchForNYT.slice(0, 1);
     console.log(searchForNYTAPI);
-    queryUrlNYT = `https://api.nytimes.com/svc/search/v2/articlesearch.json?q=${searchForNYTAPI}&headline:${searchForNYTAPI}&api-key=${apiKey}`;
+    queryUrlNYT = `https://api.nytimes.com/svc/search/v2/articlesearch.json?q=${searchForNYTAPI}&fq=headline:${searchForNYTAPI}&api-key=${apiKey}`;
     console.log(queryUrlNYT);
 
     // Ajax call for connecting NYT API
