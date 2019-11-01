@@ -51,6 +51,8 @@ function iTunesResults() {
     NYTresponse5();
 }
 
+//  TEST
+https://itunes.apple.com/search?term=hip-hop&media=music&entity=musicTrack
 
 // connecting AJAX request to iTunes API
 function submit() {
@@ -60,9 +62,10 @@ function submit() {
         url: queryUrl,
         method: "GET"
     }).then(function (response) {
-
+        
         topResults = JSON.parse(response);
         topValues = Object.values(topResults);
+        console.log(topValues);
 
         iTunesResults();
     });
@@ -152,13 +155,19 @@ $("#submit-btn").on("click", function () {
 // *** END OF ITUNES API ***
 // 
 
+// TEST
+// https://api.nytimes.com/svc/search/v2/articlesearch.json?q=music&fq=headline:Michael+Jackson&api-key=C3dkR8GWRlTGbLGqtwwnOCS620BU58vY;
+// var queryUrlNYT = `https://api.nytimes.com/svc/search/v2/articlesearch.json?q=${searchForNYTAPI}&api-key=${apiKey}`;
+// queryUrlNYT = `https://api.nytimes.com/svc/search/v2/articlesearch.json?q=${searchForNYTAPI}+${media}&headline:${searchForNYTAPI}&api-key=${apiKey}`;
+
+
 
 // 
 // *** NYT API ***
 // 
 var apiKey = "C3dkR8GWRlTGbLGqtwwnOCS620BU58vY";
-var limit = 5
-var queryUrlNYT = `https://api.nytimes.com/svc/search/v2/articlesearch.json?q=${searchForNYTAPI}&api-key=${apiKey}`;
+var limit = 3;
+var queryUrlNYT;
 var searchForNYTAPI = "";
 var articleArray1 = [];
 var articleArray2 = [];
@@ -170,6 +179,8 @@ var articleArray5 = [];
 function NYTresponse1() {
     searchForNYTAPI = searchForNYT.slice(0, 1);
     console.log(searchForNYTAPI);
+    queryUrlNYT = `https://api.nytimes.com/svc/search/v2/articlesearch.json?q=${searchForNYTAPI}&headline:${searchForNYTAPI}&api-key=${apiKey}`;
+    console.log(queryUrlNYT);
 
     // Ajax call for connecting NYT API
     $.ajax({
@@ -205,6 +216,8 @@ function NYTresponse1() {
 function NYTresponse2() {
     searchForNYTAPI = searchForNYT.slice(1, 2);
     console.log(searchForNYTAPI);
+    queryUrlNYT = `https://api.nytimes.com/svc/search/v2/articlesearch.json?q=${searchForNYTAPI}&headline:${searchForNYTAPI}&api-key=${apiKey}`;
+    console.log(queryUrlNYT);
 
     // Ajax call for connecting NYT API
     $.ajax({
@@ -240,6 +253,8 @@ function NYTresponse2() {
 function NYTresponse3() {
     searchForNYTAPI = searchForNYT.slice(2, 3);
     console.log(searchForNYTAPI);
+    queryUrlNYT = `https://api.nytimes.com/svc/search/v2/articlesearch.json?q=${searchForNYTAPI}&headline:${searchForNYTAPI}&api-key=${apiKey}`;
+    console.log(queryUrlNYT);
 
     // Ajax call for connecting NYT API
     $.ajax({
@@ -275,6 +290,8 @@ function NYTresponse3() {
 function NYTresponse4() {
     searchForNYTAPI = searchForNYT.slice(3, 4);
     console.log(searchForNYTAPI);
+    queryUrlNYT = `https://api.nytimes.com/svc/search/v2/articlesearch.json?q=${searchForNYTAPI}&headline:${searchForNYTAPI}&api-key=${apiKey}`;
+    console.log(queryUrlNYT);
 
     // Ajax call for connecting NYT API
     $.ajax({
@@ -310,6 +327,8 @@ function NYTresponse4() {
 function NYTresponse5() {
     searchForNYTAPI = searchForNYT.slice(4, 5);
     console.log(searchForNYTAPI);
+    queryUrlNYT = `https://api.nytimes.com/svc/search/v2/articlesearch.json?q=${searchForNYTAPI}&headline:${searchForNYTAPI}&api-key=${apiKey}`;
+    console.log(queryUrlNYT);
 
     // Ajax call for connecting NYT API
     $.ajax({
