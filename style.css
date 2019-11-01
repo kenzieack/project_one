@@ -47,7 +47,7 @@ h4 {
 }
 
 .box {
-    background-image: url(./assets/slideshow/slideshow-7.jpg);
+    background-image: url(./assets/slideshow/slideshow-1.jpg);
     display: block;
     align-content: center;
     background-color: white;
@@ -62,6 +62,10 @@ h4 {
     background-color: dodgerblue;
     margin-top: 25px;
     width: 20%;
+}
+
+.dropdown-trigger:hover {
+    background-color: blue;
 }
 
 .btn {
@@ -82,11 +86,15 @@ b,
 #submit-btn {
     padding: 10px;
     display: block;
-    background-color: rgb(59, 59, 224);
+    background-color: rgb(255, 201, 100);
     border-radius: 25px;
     margin: 23px auto;
     width: 100px;
     color: white;
+}
+
+#sumbit-btn:hover {
+    background-color: blue;
 }
 
 #bender {
@@ -114,6 +122,14 @@ b,
 
 b {
     font-size: 150%;
+}
+
+.h6-header {
+    color: #fff;
+  text-align: center;
+  /* -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate; */
 }
 
 /* MAKE SURE THIS STAYS AT THE BOTTOM OF THE STYLE PAGE */
