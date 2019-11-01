@@ -51,7 +51,7 @@ body {
   }
   
   .box {
-    background-image: url(./Assets/media-banner.jpg);
+    /* background-image: url(./Assets/media-banner.jpg); */
     display: block;
     align-content: center;
     background-color: white;
