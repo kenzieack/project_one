@@ -51,7 +51,7 @@ body {
   }
   
   .box {
-    background-image: url(./Assets/media-banner.jpg);
+    /* background-image: url(./Assets/media-banner.jpg); */
     display: block;
     align-content: center;
     background-color: white;
@@ -89,7 +89,7 @@ body {
   background-color: rgb(59, 59, 224);
   border-radius: 25px;
   margin: 23px auto;
-  width: 10%;
+  width: 100px;
   color: white;
 }
 
@@ -107,6 +107,15 @@ body {
 .article-title {
     font-weight: 900 !important;
 }
+
+@media only screen and (max-width: 500px) {
+    
+    body, .card, .dropdown-trigger {
+        width: 100%;
+    }
+  }
+
+  
 
 /* MAKE SURE THIS STAYS AT THE BOTTOM OF THE STYLE PAGE */
 .no-display {
