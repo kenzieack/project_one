@@ -51,8 +51,6 @@ function iTunesResults() {
     NYTresponse5();
 }
 
-//  TEST
-https://itunes.apple.com/search?term=hip-hop&media=music&entity=musicTrack
 
 // connecting AJAX request to iTunes API
 function submit() {
@@ -62,7 +60,7 @@ function submit() {
         url: queryUrl,
         method: "GET"
     }).then(function (response) {
-        
+
         topResults = JSON.parse(response);
         topValues = Object.values(topResults);
         console.log(topValues);
@@ -155,12 +153,6 @@ $("#submit-btn").on("click", function () {
 // *** END OF ITUNES API ***
 // 
 
-// TEST
-// https://api.nytimes.com/svc/search/v2/articlesearch.json?q=music&fq=headline:Michael+Jackson&api-key=C3dkR8GWRlTGbLGqtwwnOCS620BU58vY;
-// var queryUrlNYT = `https://api.nytimes.com/svc/search/v2/articlesearch.json?q=${searchForNYTAPI}&api-key=${apiKey}`;
-// queryUrlNYT = `https://api.nytimes.com/svc/search/v2/articlesearch.json?q=${searchForNYTAPI}+${media}&headline:${searchForNYTAPI}&api-key=${apiKey}`;
-
-
 
 // 
 // *** NYT API ***
@@ -204,7 +196,7 @@ function NYTresponse1() {
     console.log(articleArray1);
 
     // CODE TO DYNAMICALLY POPULATE THE RESULTS SHOULD BE GENERATED HERE
-
+    finalResults();
 
 
 
@@ -241,7 +233,7 @@ function NYTresponse2() {
     console.log(articleArray2);
 
     // CODE TO DYNAMICALLY POPULATE THE RESULTS SHOULD BE GENERATED HERE
-
+    finalResults();
 
 
 
@@ -278,7 +270,7 @@ function NYTresponse3() {
     console.log(articleArray3);
 
     // CODE TO DYNAMICALLY POPULATE THE RESULTS SHOULD BE GENERATED HERE
-
+    finalResults();
 
 
 
@@ -315,7 +307,7 @@ function NYTresponse4() {
     console.log(articleArray4);
 
     // CODE TO DYNAMICALLY POPULATE THE RESULTS SHOULD BE GENERATED HERE
-
+    finalResults();
 
 
 
@@ -352,7 +344,7 @@ function NYTresponse5() {
     console.log(articleArray5);
 
     // CODE TO DYNAMICALLY POPULATE THE RESULTS SHOULD BE GENERATED HERE
-
+    finalResults();
 
 
 
@@ -362,74 +354,15 @@ function NYTresponse5() {
 }
 
 
-// function to dynamically generate the results needs to go here!!!
-function finalResults(){
+// function to dynamically generate the results
+function finalResults() {
+    for (i = 1; i < 6; i++) {
+        $(`#heading${i}`).text(searchForNYT[i]);
+    }
 
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// // **** INGRID'S OLD DRAFT - DO NOT DELETE!!!!
-// // function to call NYT API once all info from iTunes has been collected
-// // function is being called inside iTunesResults()
-// function NYTresponse() {
-//     // for (var i = 0; i < limit; i++) {
-//     //     searchForNYTAPI = searchForNYT.slice(i, i+1);
-//     //     console.log(searchForNYTAPI);
-
-
-//             searchForNYTAPI = searchForNYT.slice(0, 1);
-//             console.log(searchForNYTAPI);
-
-//         // Ajax call for connecting NYT API
-//         $.ajax({
-//             url: queryUrlNYT,
-//             method: "GET"
-//         }).then(function (response) {
-//             console.log(response);
-//             for (j = 0; j < limit; j++) {
-
-//                 var article = response.response.docs[j];
-//                 console.log(response.response.docs[j]);
-
-//                 var articleObj = {
-//                     author: article.byline.original,
-
-//                     title: article.headline.main,
-
-//                     url: article.web_url
-
-//                 };
-//                 // `articleArray${i+1}`.push(articleObj);
-//                 articleArray1.push(articleObj);
-
-
-//             }
-//         })
-//         // console.log(`articleArray${i+1}`);
-//         console.log(articleArray1);
-
-//     // }
-
-//     // CODE TO DYNAMICALLY POPULATE THE RESULTS SHOULD BE GENERATED HERE
-
-//     // AFTER THE RESULTS HAS CHANGED TO INCORPORATE THE RIGHT INFORMATION
-//     // THEN THIS LINE WILL RUN TO DISPLAY THE RESULTS SECTION
-//     // $("#results").removeAttr("class", "no-display");
-// }
 
 
 
