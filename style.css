@@ -112,9 +112,12 @@ b,
     }
 }
 
+b {
+    font-size: 150%;
+}
 
 /* MAKE SURE THIS STAYS AT THE BOTTOM OF THE STYLE PAGE */
-
+/* 
 .no-display {
     display: none;
-}
+} */
